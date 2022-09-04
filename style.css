@@ -1,0 +1,118 @@
+/* estilo general */
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+/* titulos */
+
+.titulo-pagina {
+    font-size: 2.7em;
+}
+
+/* clase flexible centrada */
+
+.contenedor-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+/* tareas */
+
+.tareas-contenedor{
+    min-height: 400px;
+    width: 100%;
+    max-width: 800px;
+}
+.tareas-lista{
+    width: 100%;
+    min-height: 50px;
+    margin: 15px 0;
+    padding: 0;
+}
+.tareas-anotador-container{
+    width: 100%;
+}
+
+/* botones e input */
+
+button{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,39,121,1) 0%, rgba(0,212,255,1) 100%);
+    border: none;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #fff;
+    min-width: max-content;
+}
+button:hover{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,26,89,1) 0%, rgba(0,127,153,1) 100%);
+}
+.tareas-borrar-boton{
+    width: 100%;
+}
+.hidden{
+    display: none;
+}
+#tareas-anotador{
+    width: 50%;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    padding-left: 20px;
+    font-size: 1.2em;
+    outline: none;
+}
+.tareas-boton-agregar{
+    width: 15%;
+}
+
+/* contenedor de la tarea */
+
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    margin: 5px 0;
+    min-height: 50px;
+    background-color: #222;
+    border-radius: 15px;
+    gap: 20px;
+}
+.delete-btn{
+    width: 25px;
+    height: 25px;
+    filter: invert();
+    cursor: pointer;
+}
+
+/* media query */
+
+@media(max-width: 425px){
+    .tareas-anotador-container{
+        display: flex;
+        flex-direction: column;
+    }
+    #tareas-anotador{
+        width: 90%;
+    }
+    .tareas-boton-agregar{
+        margin: auto;
+        margin-top: 10px;
+        width: 60%;
+    }
+}
